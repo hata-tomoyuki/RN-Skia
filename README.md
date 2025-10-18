@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+# React Native Skia サンプルアプリ 🎨
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+このプロジェクトは、React Native Skiaの使い方を学ぶためのサンプルアプリです。
 
-## Get started
+## 📚 参考記事
 
-1. Install dependencies
+このプロジェクトは以下の記事を参考に作成されました：
+- [React Native Skiaを使ってみよう！](https://zenn.dev/tellernovel_inc/articles/01bc1085b3f273)
+
+## ✨ 機能
+
+このアプリには以下の4つのReact Native Skiaの例が含まれています：
+
+### 1. 基本的な円 ⭕
+3つの円をブレンドモード（multiply）で重ねて表示します。Skiaの基本的な図形描画とブレンドモードの使い方を学べます。
+
+### 2. アニメーション 🌀
+円が回転しながら拡大縮小するアニメーションです。React Native ReanimatedとSkiaを組み合わせたアニメーションの実装方法を学べます。
+
+### 3. グラデーションテキスト 🎨
+テキストにグラデーションを適用し、グラデーションの色がアニメーションで変化します。テキスト描画とグラデーションの使い方を学べます。
+
+### 4. 画像とジェスチャー 👆
+画像をドラッグすると、移動距離に応じてブラーがかかります。React Native Gesture Handler、マスク、ブラー効果の使い方を学べます。
+
+## 🚀 セットアップ
+
+1. 依存関係をインストール
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. アプリを起動
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. 表示オプション
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   - `i` - iOSシミュレータで開く
+   - `a` - Androidエミュレータで開く
+   - `w` - Webブラウザで開く
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 プロジェクト構成
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+├── app/
+│   └── (tabs)/
+│       ├── index.tsx      # ホーム画面（サンプル一覧）
+│       ├── circles.tsx    # 基本的な円の例
+│       ├── animated.tsx   # アニメーションの例
+│       ├── text.tsx       # グラデーションテキストの例
+│       └── gesture.tsx    # 画像とジェスチャーの例
+├── components/
+│   └── skia/
+│       ├── BasicCircles.tsx      # 基本的な円のコンポーネント
+│       ├── AnimatedCircles.tsx   # アニメーション付き円のコンポーネント
+│       ├── GradientText.tsx      # グラデーションテキストのコンポーネント
+│       └── ImageWithGesture.tsx  # 画像とジェスチャーのコンポーネント
+└── assets/
+    └── images/            # 画像ファイル
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔧 使用技術
 
-## Learn more
+- **React Native** - クロスプラットフォームのモバイルアプリ開発フレームワーク
+- **Expo** - React Native開発ツールチェーン
+- **@shopify/react-native-skia** - SkiaグラフィックスエンジンのReact Nativeバインディング
+- **react-native-reanimated** - 高性能なアニメーションライブラリ
+- **react-native-gesture-handler** - ジェスチャー処理ライブラリ
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📖 詳細情報
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### React Native Skiaについて
 
-## Join the community
+React Native Skiaは、Flutterなどでも使われるSkiaエンジンをReact Nativeで利用するためのライブラリです。CanvasライクなAPIを提供し、ネイティブのAPIでは表現しづらいリッチな要素のレンダリングに向いています。
 
-Join our community of developers creating universal apps.
+**主な特徴：**
+- 高性能なグラフィックス描画
+- Canvasライクな直感的なAPI
+- React Native Reanimatedとの統合
+- iOS、Android、Web対応
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**活用シーン：**
+- グラフやチャートの表示
+- カスタムアニメーション
+- 複雑なUI要素の描画
+- 画像加工やフィルター効果
+
+### 参考リソース
+
+- [React Native Skia公式ドキュメント](https://shopify.github.io/react-native-skia/)
+- [William Candillon YouTube チャンネル](https://www.youtube.com/wcandillon)
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/)
+
+## 📝 ライセンス
+
+このプロジェクトはMITライセンスの下で公開されています。
+# RN-Skia
